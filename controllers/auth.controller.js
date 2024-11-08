@@ -75,7 +75,7 @@ export const forgotPassword = async (req, res, next) => {
         await user.save();
 
         // Construct password reset URL
-        const resetUrl = `http://localhost:5173/reset-password/${resetToken}`;
+        const resetUrl = `https://freelancerjobportal.netlify.app/reset-password/${resetToken}`;
 
 
         // Send email with reset link
