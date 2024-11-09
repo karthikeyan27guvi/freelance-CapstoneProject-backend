@@ -8,7 +8,6 @@ import gigRoute from "./routes/gig.route.js";
 import messageRoute from "./routes/message.route.js";
 import reviewRoute from "./routes/review.route.js";
 import orderRoute from "./routes/order.route.js";
-import cookieParser from 'cookie-parser';
 import cors from "cors";
 
 
@@ -27,7 +26,7 @@ const connet = async ()=>{
 
 app.use(cors({origin: 'https://freelancerjobportal.netlify.app',credentials: true}));
 app.use(express.json())
-app.use(cookieParser())
+
 
 app.use("/api/auth", authRoute)
 app.use("/api/users", userRoute)
