@@ -24,7 +24,7 @@ const connet = async ()=>{
     }
 }
 
-app.use(cors({origin: 'https://freelancerjobportal.netlify.app',credentials: true}));
+app.use(cors({origin: 'https://freelancerjobportal.netlify.app'}));
 app.use(express.json())
 
 
