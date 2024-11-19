@@ -28,12 +28,8 @@ export const verifyToken = (req, res, next) => {
     const token = authHeader.split(" ")[1];
 
     jwt.verify(token, process.env.JWT_KEY, (err, payload) => {
-        if (err) {
-            if (err.name === "TokenExpiredError") {
-                return next(createError(403, "Token has expired!"));
-            }
+        if (err) 
             return next(createError(403, "Token is not valid!"));
-        }
 
         req.userId = payload.id;
         req.isSeller = payload.isSeller;
