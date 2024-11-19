@@ -30,6 +30,10 @@ app.use(cors({
     methods: "GET,POST,PUT,DELETE", 
     allowedHeaders: ['Authorization', 'Content-Type']
 }));
+
+// Allow preflight requests for all routes
+app.options("*", cors());
+// Middleware
 app.use(express.json())
 
 
